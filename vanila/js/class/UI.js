@@ -31,6 +31,9 @@ class UI {
         if(!activeAlert) {
             const alert = document.createElement('p');
             alert.classList.add('bg-red-100', 'border-red-400', 'text-red-700', 'px-4', 'py-3', 'rounded', 'max-w-lg', 'mx-auto', 'mt-6', 'text-center');
+
+            // Add data-cy
+            alert.dataset.cy = 'alert';
     
             // ========== (2 ways are proposed) ==========
             // 1) More secure but less legible and more extensive
@@ -47,7 +50,7 @@ class UI {
 
             // 2) Clearer but a little less reliable so it has no validations and we can inadvertently enter broken HTML code
             // alert.innerHTML = `
-            //         <strong class="font-bold">Error!</strong>
+            //         <strong class="font-bold">Error: </strong>
             //         <span class="block sm:inline">${mensaje}</span>
             //     `;     
 
