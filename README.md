@@ -28,7 +28,7 @@
   - Ve a la carpeta __react__ y corre el comando __npm install__ para instalar sus dependencias
   - Inicia la __Versión React__ con __npm run start__
     - En cuanto a esta versión, aún no está terminada, tengo un inconveniente con un estado que no permite que se rendericen los Pokémons luego de cada búsqueda
-    - Sin embargo, funciona cuando luego de realizar una búsqueda, modificamos el texto, provocando que se genere un renderizado y recién ahí muestra el resultado de la búsqueda, si tienen algún consejo lo agradecería
+    - Sin embargo, funciona cuando luego de realizar una búsqueda, modificamos el texto de búsqueda, provocando que se genere un renderizado y recién ahí muestra el resultado de la búsqueda, si tienen algún consejo lo agradecería
 
 ---
 
