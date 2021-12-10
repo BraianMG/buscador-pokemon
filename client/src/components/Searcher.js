@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PokemonCard from './PokemonCard';
 import axios from 'axios';
 import Alert from './Alert';
@@ -13,10 +13,6 @@ const Searcher = props => {
     });
     const { allPokemon } = props;
     let listPokemon = [];
-
-    useEffect(() => {
-        setResult(listPokemon);
-    }, []);
 
     const readForm = e => {
         setArgument(e.target.value);
@@ -78,7 +74,7 @@ const Searcher = props => {
 
     return (
         <div>
-            <div class="searcher max-w-lg mx-auto ">
+            <div className="searcher max-w-lg mx-auto ">
                 <form data-cy="form" onSubmit={find}>
                     <div>
                         <input 
@@ -86,7 +82,7 @@ const Searcher = props => {
                             id="term"
                             name="term"
                             data-cy="text-input"
-                            class="mt-3 rounded w-full p-2 "
+                            className="mt-3 rounded w-full p-2 "
                             placeholder="Ingresa el nombre a buscar. Ejemplo: Pikachu o Charizard"
                             onChange={readForm}
                         />
@@ -95,7 +91,7 @@ const Searcher = props => {
                             type="submit"
                             value="BUSCADOR POKÉMON"
                             data-cy="search-button"
-                            class="mt-5 w-full py-2 bg-yellow-400 cursor-pointer font-bold hover:bg-yellow-500 rounded"
+                            className="mt-5 w-full py-2 bg-yellow-400 cursor-pointer font-bold hover:bg-yellow-500 rounded"
                         />   
                     </div>
                 </form>
@@ -103,7 +99,7 @@ const Searcher = props => {
 
             <Alert alert={alert}/>
 
-            <div id="result" class="container mx-auto mt-10 flex flex-wrap">
+            <div id="result" className="container mx-auto mt-10 flex flex-wrap">
                 <PokemonCard result={result} />
             </div>
 
