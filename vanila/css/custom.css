@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  /* font-size: 80%; */
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+     ),  
+     url('../img/fondo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* height: 100vh; */
+  min-height: 100vh;
+}
+
+.img-pokeon {
+  background-image: url('../img/blob.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.copy{ 
+  text-shadow: 1px  0px 0px black,
+               0px  1px 0px black,
+              -1px  0px 0px black,
+               0px -1px 0px black;
+}
