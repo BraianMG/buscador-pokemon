@@ -7,7 +7,7 @@
 
 ---
 
-## __Version Vanila__
+## __Versión Vanila__
 - Para __iniciar__ la aplicación:
   - Ve a la carpeta __vanila__ y corre el comando __npm install__ para instalar sus dependencias
   - Inicia la __Versión Vanila__ con __npm run dev__
