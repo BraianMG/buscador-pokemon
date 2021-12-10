@@ -2,7 +2,8 @@
 
 describe('Carga la página principal', () =>{
     it('Carga la página principal', () => {
-        cy.visit('http://127.0.0.1:5500/vanila/index.html');
+        // cy.visit('http://127.0.0.1:5500/vanila/index.html');
+        cy.visit('/');
 
         cy.get('[data-cy="proyect-title"]')
             .invoke('text')
