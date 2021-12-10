@@ -39,20 +39,20 @@ const Searcher = props => {
             }, 3000);
         }
         
-        // Recorro la lista de Pokémon
+        // I go through the list of Pokémon
         allPokemon.results.forEach(pokemon => {
 
-            // Búsqueda por nombre parcial
+            // Search by partial name
             if (pokemon.name.indexOf(argument) > -1) {
 
-                // Consulto la API para obtener los datos del Pokémon
+                // I consult the API to obtain the data of the Pokémon
                 axios.get(pokemon.url)
                     .then((res) => {
                         
-                        // Excluyo las variantes estéticas para solo tener los Pokémon originales
+                        // I exclude the aesthetic variants to only have the original Pokémon
                         if (res.data.is_default) {
 
-                            // Agrego los datos del Pokémon a la lista de resultados
+                            // I add the Pokémon's data to the list of results
                             listPokemon.push({
                                 id: res.data.id,
                                 name: res.data.name,
@@ -70,7 +70,7 @@ const Searcher = props => {
             }
         });
         
-        // Actualizo el estado de la lista de Pokémon a mostrar
+        // I update the status of the list of Pokémon to show
         setResult(listPokemon);
         console.log(listPokemon);
         console.log(result);
@@ -79,12 +79,13 @@ const Searcher = props => {
     return (
         <div>
             <div class="searcher max-w-lg mx-auto ">
-                <form onSubmit={find}>
+                <form data-cy="form" onSubmit={find}>
                     <div>
                         <input 
                             type="text"
                             id="term"
                             name="term"
+                            data-cy="text-input"
                             class="mt-3 rounded w-full p-2 "
                             placeholder="Ingresa el nombre a buscar. Ejemplo: Pikachu o Charizard"
                             onChange={readForm}
@@ -92,8 +93,9 @@ const Searcher = props => {
 
                         <input 
                             type="submit"
-                            value="Buscar Pokémon"
-                            class="mt-5 w-full py-2 bg-yellow-400 cursor-pointer font-bold uppercase hover:bg-yellow-500 rounded"
+                            value="BUSCADOR POKÉMON"
+                            data-cy="search-button"
+                            class="mt-5 w-full py-2 bg-yellow-400 cursor-pointer font-bold hover:bg-yellow-500 rounded"
                         />   
                     </div>
                 </form>
