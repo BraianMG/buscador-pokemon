@@ -29,9 +29,3 @@
   - Inicia la __Versión React__ con __npm run start__
     - En cuanto a esta versión, aún no está terminada, tengo un inconveniente con un estado que no permite que se rendericen los Pokémons luego de cada búsqueda
     - Sin embargo, funciona cuando luego de realizar una búsqueda, modificamos el texto de búsqueda, provocando que se genere un renderizado y recién ahí muestra el resultado de la búsqueda, si tienen algún consejo lo agradecería
-
----
-
-## __Comentarios Generales__
-- Fue un lindo Test, me encontré con dificultades que no creí encontrar y me tomaron un tiempito superarlas.
-- Inicié el test pensando en la __Versión Vanila__ ya que consideraba que utilizar __React__ era muy pesado para lo pequeño del proyecto, de todas formas quise sumarlo como una alternativa más pero bueno por tiempo no alcancé a terminarlo de una mejor manera o al menos de la manera en que me gustaría.
